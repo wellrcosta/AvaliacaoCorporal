@@ -6,91 +6,185 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/edtPeso"
+    <TextView
+        android:id="@+id/txt3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="32dp"
-        android:hint="Peso"
-        android:textSize="12sp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="Peso"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txtPeso"
-        app:layout_constraintTop_toTopOf="@+id/txtPeso" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt2" />
+
+    <EditText
+        android:id="@+id/edt3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt3" />
+
+    <EditText
+        android:id="@+id/edt2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt2" />
+
+    <EditText
+        android:id="@+id/edt1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt1" />
+
+    <TextView
+        android:id="@+id/txt1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="Peso"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
     <TextView
         android:id="@+id/txtPeso"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="8dp"
-        android:contentDescription="Peso"
-        android:text="Peso"
-        app:layout_constraintEnd_toStartOf="@+id/edtPeso"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNome" />
-
-    <EditText
-        android:id="@+id/edtAltura"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="32dp"
-        android:hint="Altura"
-        android:textSize="12sp"
+        android:contentDescription="Peso"
+        android:text="Peso"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/edtPeso"
+        app:layout_constraintEnd_toEndOf="@+id/txtNome"
+        app:layout_constraintStart_toStartOf="@+id/txtNome"
+        app:layout_constraintTop_toTopOf="@+id/edtPeso" />
+
+    <TextView
+        android:id="@+id/txt2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="Peso"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txtAltura"
-        app:layout_constraintTop_toTopOf="@+id/txtAltura" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt1" />
 
     <EditText
         android:id="@+id/edtNome"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="Campo para preenchimento do nome"
         android:hint="Nome"
-        android:textSize="12sp"
+        android:textSize="10sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/txtNome"
-        app:layout_constraintTop_toTopOf="@+id/txtNome" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtPeso"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Campo para preenchimento do peso"
+        android:hint="Peso"
+        android:inputType="numberDecimal"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/edtNome"
+        app:layout_constraintStart_toStartOf="@+id/edtNome"
+        app:layout_constraintTop_toBottomOf="@+id/edtNome" />
 
     <TextView
         android:id="@+id/txtNome"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="8dp"
         android:contentDescription="Nome"
         android:text="Nome"
-        app:layout_constraintEnd_toStartOf="@+id/edtNome"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/edtNome"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/txtAltura"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
-        android:contentDescription="Altura"
-        android:text="Altura"
-        app:layout_constraintEnd_toStartOf="@+id/edtAltura"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtPeso" />
+        app:layout_constraintTop_toTopOf="@+id/edtNome" />
 
     <Button
-        android:id="@+id/btnCalcularIMC"
-        android:layout_width="wrap_content"
+        android:id="@+id/btnCalcular"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        android:contentDescription="Botão Calcular IMC"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#3F51B5"
+        android:contentDescription="Botão Calcular"
         android:text="Calcular"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtAltura" />
+        app:layout_constraintTop_toBottomOf="@+id/edt3" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="392dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/edtNome"
+        app:layout_constraintStart_toStartOf="@+id/txtNome"
+        app:layout_constraintTop_toBottomOf="@+id/edtPeso">
+
+        <RadioButton
+            android:id="@+id/rd1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Masculino" />
+
+        <RadioButton
+            android:id="@+id/rd2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Feminino" />
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

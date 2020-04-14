@@ -11,8 +11,8 @@ class Resultadoimc : AppCompatActivity() {
         setContentView(R.layout.activity_resultadoimc)
 
         val pessoa = intent.extras?.get("pessoa") as Pessoa
-        val imc = pessoa.peso/(pessoa.altura * pessoa.altura)
+        txtResultado.text= pessoa.calcularGC()
+        txtResultado.contentDescription= pessoa.calcularGC()
 
-        txtResultado.text= "${pessoa.nome}, o seu IMC é de %.2f".format(imc)
     }
 }
