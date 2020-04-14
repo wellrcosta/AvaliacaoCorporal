@@ -1,5 +1,7 @@
 package com.example.imc
 
+import android.app.AlertDialog
+import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -16,10 +18,23 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         btnCalcularIMC.setOnClickListener(View.OnClickListener {
-        val pessoa = Pessoa(edtNome.text.toString(), edtPeso.text.toString().toDouble(),edtAltura.text.toString().toDouble())
-            val intent = Intent(this, Resultadoimc::class.java)
-           intent.putExtra("pessoa", pessoa as Serializable)
-            startActivity(intent)
+
+            try {
+                var peso: Double = edtPeso.text.toString().toDouble()
+                var altura: Double = edtAltura.text.toString().toDouble()
+
+
+                val pessoa = Pessoa(edtNome.text.toString(), peso, altura)
+                val intent = Intent(this, Resultadoimc::class.java)
+                intent.putExtra("pessoa", pessoa as Serializable)
+                startActivity(intent)
+            }
+            catch (err: Throwable) {
+                val builder = AlertDialog.Builder(this)
+                builder.setTitle("ERRO")
+                builder.setMessage(err.message)
+                builder.show()
+            }
         })
     }
 }
